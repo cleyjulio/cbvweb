@@ -1,0 +1,16 @@
+{TODO 1 : Feriados}
+{DONE 2 : Filtro por colunas e pesquisa????}
+{TODO 2 : Relatorio por período e intervalo de horário}
+{DONE 2 : Relatorio de realizados}
+{DONE 2 : Relatorio de agendados do dia}
+{DONE 1 -oApp : Não deixar agendar se ainda não concluíu o agendamento anterior.}
+{TODO 1 -oApp : Favor comparecer na portaria com 30 minutos de antencedência}
+{DONE 1 -oGERAL : Data na tela de agenda evento manual ???? verificar}
+{TODO 1 -oGERAL : Esqueci minha senha}
+{DONE 1 -oApp : Título ao cadastrar veículo com erro}
+{DONE 1 -oApp : Poder cancelar agendamento}
+{DONE 1 -oApp : Não mostrar editar ao selecionar veículos}
+{DONE 1 -oApp : Placas maiores (Fonte)}
+{DONE 1 -oApp : Erro visual agendamentos}
+{DONE 1 -oApp : Agurade cadastros (testar)}
+{TODO 1 -oApp : Testar entrar automático}
