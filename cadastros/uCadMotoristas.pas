@@ -388,10 +388,10 @@ begin
     try
 
 
-    DM.qVeiculos.Params[0].AsString := DSPadrao.DataSet.FieldByName('cod').AsString;
-    DSVeiculo.DataSet.Open;
-    MemoAsText(DSVeiculo.DataSet);
-    DSVeiculo.DataSet.Refresh;
+      DM.qVeiculos.Params[0].AsString := DSPadrao.DataSet.FieldByName('cod').AsString;
+      DSVeiculo.DataSet.Open;
+      MemoAsText(DSVeiculo.DataSet);
+      DSVeiculo.DataSet.Refresh;
     except
 
     end;

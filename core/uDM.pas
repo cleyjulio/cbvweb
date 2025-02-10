@@ -142,6 +142,8 @@ type
     qParametroshoras_agenda_no_dia: TTimeField;
     qAgendamentosverificado_por: TMemoField;
     qAgendamentosverificado: TDateTimeField;
+    qVeiculosfeito_por: TMemoField;
+    qVeiculoscriado: TDateTimeField;
 
   private
     { Private declarations }

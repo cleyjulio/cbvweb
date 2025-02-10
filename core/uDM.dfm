@@ -381,9 +381,9 @@ object DM: TDM
     Connection = UniMainModule.Conexao
     SQL.Strings = (
       
-        'select v.cod, v.cod_motorista, v.placa, v.placa || '#39' - Eixos: '#39' ' +
-        '|| v.eixos || '#39' - '#39' || v.modelo as descricao, v.modelo, v.eixos,' +
-        ' v.status from veiculo v'
+        'select v.cod, v.cod_motorista, v.feito_por, v.criado, v.placa, v' +
+        '.placa || '#39' - Eixos: '#39' || v.eixos || '#39' - '#39' || v.modelo as descri' +
+        'cao, v.modelo, v.eixos, v.status from veiculo v'
       'where v.status = 1 and v.cod_motorista = :cod '
       'order by placa ')
     Left = 248
@@ -423,6 +423,13 @@ object DM: TDM
     object qVeiculoscod_motorista: TIntegerField
       FieldName = 'cod_motorista'
       Required = True
+    end
+    object qVeiculosfeito_por: TMemoField
+      FieldName = 'feito_por'
+      BlobType = ftMemo
+    end
+    object qVeiculoscriado: TDateTimeField
+      FieldName = 'criado'
     end
   end
   object qAgendamentoM: TUniQuery
