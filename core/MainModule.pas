@@ -32,7 +32,7 @@ type
     var cod_user, adm : integer;
         username, email : string;
         AjustaTela, mobile, intervalo : Boolean;
-        agenda_antecipa, intervalo_agenda : Smallint;
+        agenda_antecipa, intervalo_agenda: Smallint;
         hora_inicio, hora_fim, hora_inicio2, hora_fim2, hora_inicio3, hora_fim3 : TDateTime;
 
 

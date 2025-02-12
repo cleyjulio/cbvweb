@@ -147,32 +147,34 @@ begin
 
   UniComboBox1.Items.Clear;
 
-  if (carregou) and (DateToStr(UniDBDateTimePicker1.DateTime) <> '30/12/1899') then
+  if (Carregou) and (DateToStr(UniDBDateTimePicker1.DateTime) <> '30/12/1899') then
   begin
 
     case Funcionamento(UniDBDateTimePicker1.DateTime) of
 
-      -1 : ShowMessage('Ocorreu um erro ao consultar a disponibilidade de data! Verifique sua conexão com a internet e tente novamente!');
+      -1: ShowMessage('Ocorreu um erro ao consultar a disponibilidade de data! Verifique sua conexão com a internet e tente novamente!');
 
 
-      0 : ShowMessage('Data indisponível para agendamento!! Selecione outra data e tente novamente!');
+      0: ShowMessage('Data indisponível para agendamento!! Selecione outra data e tente novamente!');
 
 
-      1 : begin
+      1:
+      begin
 
 
         frmAgendamento.ShowMask('Verificando horários...');
         TimerHorarios.Enabled := True;
         UniSession.Synchronize;
 
-       end;
+      end;
 
-      2 : begin
+      2:
+      begin
 
-          ShowMessage('Só é possível agenda com até ' + MM.agenda_antecipa.ToString + ' dias de antecedência!');
-          exit;
+        ShowMessage('Só é possível agenda com até ' + MM.agenda_antecipa.ToString + ' dias de antecedência!');
+        Exit;
 
-        end;
+      end;
 
     end;
 
@@ -203,7 +205,7 @@ begin
   HabilitaBotoes;
   HabilitaCampos(True);
   btNew.Click();
-//  UniDBDateTimePicker1.DateTime := Now();
+  //UniDBDateTimePicker1.DateTime := Now;
   UniDBDateTimePicker1.SetFocus;
   Carregou := True;
 end;

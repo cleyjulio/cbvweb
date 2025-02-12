@@ -146,11 +146,11 @@ begin
       //verifica se é no prazo de antecedencia o agendamento
       DM.q1.Close;
       DM.q1.SQL.Clear;
-      DM.q1.SQL.Add('SELECT agenda_antecipa, intervalo_agenda FROM parametros ');
+      DM.q1.SQL.Add('SELECT agenda_antecipa, intervalo FROM parametros ');
       DM.q1.Open;
 
       MM.agenda_antecipa := DM.q1.FieldByName('agenda_antecipa').AsInteger;
-      MM.intervalo_agenda := DM.q1.FieldByName('intervalo_agenda').AsInteger;
+      MM.intervalo_agenda := 4;//DM.q1.FieldByName('intervalo').AsDateTime;
 
       if (data <= (data_atual + MM.agenda_antecipa)) then
       begin
